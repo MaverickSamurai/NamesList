@@ -9,7 +9,7 @@ namespace CheckName
         {
             List<string> namelist = new List<string>() { "Mirsamir", "Sadiq", "Cavid", "Orxan", "Ramil", "Esqin", "Cabbar", "Abbas", "Fuad"};
 
-            TeacherName(CheckName, namelist);
+            GetNamesList(CheckName, namelist);
             
             
 
@@ -18,11 +18,11 @@ namespace CheckName
 
         public static bool CheckName(string name)
         {
-            return name == "Cavid";
+            return name != "Cavid";
         }
 
 
-        public static void TeacherName(Predicate<string> predicate, List<string> checkname)
+        public static void GetNamesList(Predicate<string> predicate, List<string> checkname)
         {
             
             foreach (var item in checkname)
